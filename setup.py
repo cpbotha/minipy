@@ -3,6 +3,11 @@
 from distutils.core import setup
 import minipy
 
+# added by cpbotha to make sure we find the README.rst
+# (with minipy 0.1, this broke the PyPI install)
+def read(fname):
+    return open(os.path.join(os.path.dirname(__file__), fname)).read()
+
 setup(
     author = minipy.__author__,
     author_email = minipy.__email__,
@@ -13,14 +18,14 @@ setup(
         'Programming Language :: Python :: 2',
         'Topic :: Software Development :: Pre-processors',
         ],
-    description = 'Minify Python 2 source code',
+    description = 'Minify Python 2 source code - PyPI Fix',
     license = minipy.__license__,
-    long_description = open('README.rst').read(),
+    long_description = read('README.rst'),
     maintainer = minipy.__maintainer__,
     maintainer_email = minipy.__email__,
-    name = 'minipy',
+    name = 'minipy-ppf',
     py_modules = ['minipy', 'test_minipy'],
-    url = 'https://github.com/gareth-rees/minipy',
+    url = 'https://github.com/cpbotha/minipy',
     version = minipy.__version__,
     entry_points = {
         'console_scripts': [

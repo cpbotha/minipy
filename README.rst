@@ -4,6 +4,9 @@ minipy
 a Python 2 minifier
 by Gareth Rees <http://garethrees.org/>
 
+This https://github.com/cpbotha/minipy is a fork of the original
+https://github.com/gareth-rees/minipy only to fix the broken PiPI
+install, see https://github.com/gareth-rees/minipy/issues/52
 
 Introduction
 ------------
