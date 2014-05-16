@@ -2,6 +2,7 @@
 
 from distutils.core import setup
 import minipy
+import os
 
 # added by cpbotha to make sure we find the README.rst
 # (with minipy 0.1, this broke the PyPI install)
